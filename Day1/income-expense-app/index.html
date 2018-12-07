@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Income Expense Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <h1 class="display-1 text-center">Income Expense Tracker</h1>
+
+  <h2 class='text-center'>Account Balance: $<span id="account-balance">100</span></h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 bg-success text-center p-3">
+        <h2>Income $<span id="income-amount"></span></h2>
+        <form id="add-income">
+          <input type="text" name="incomeTitle" placeholder='Title'/>
+          <input type="text" name="incomeAmount" placeholder="Amount"/>
+          <button class="btn btn-primary">Add Income</button>
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Income</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="income-data">
+            <tr>
+              <td>1</td>
+              <td>100</td>
+            </tr>
+            <tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6 bg-info text-center p-3">
+        <h2>Expenses</h2>
+        <form action="">
+          <input type="text" />
+          <button class="btn btn-primary">Add Expense</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
