@@ -16,12 +16,32 @@
   <h2 class='text-center'>Account Balance: $<span id="account-balance">100</span></h2>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-6 bg-success text-center p-3">
+      <div class="col-6 text-center p-3">
         <h2>Income $<span id="income-amount"></span></h2>
         <form id="add-income">
-          <input type="text" name="incomeTitle" placeholder='Title'/>
-          <input type="text" name="incomeAmount" placeholder="Amount"/>
+          <input type="text" name="incomeTitle" placeholder='Title' />
+          <input type="text" name="incomeAmount" placeholder="Amount" />
           <button class="btn btn-primary">Add Income</button>
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Incomes</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="income-data">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6 text-center p-3">
+        <h2>Expenses $<span id="expense-amount"></span></h2>
+        <form id="add-expense">
+          <input type="text" name="expenseTitle" placeholder='Title' />
+          <input type="text" name="expenseAmount" placeholder="Amount" />
+          <button class="btn btn-primary">Add Expense</button>
         </form>
 
         <table class="table">
@@ -31,21 +51,10 @@
               <th>Amount</th>
             </tr>
           </thead>
-          <tbody id="income-data">
-            <tr>
-              <td>1</td>
-              <td>100</td>
-            </tr>
-            <tr>
+          <tbody id="expenses-data">
+
           </tbody>
         </table>
-      </div>
-      <div class="col-6 bg-info text-center p-3">
-        <h2>Expenses</h2>
-        <form action="">
-          <input type="text" />
-          <button class="btn btn-primary">Add Expense</button>
-        </form>
       </div>
     </div>
   </div>
