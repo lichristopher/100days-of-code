@@ -21,6 +21,8 @@ tipPercentageInput.addEventListener("input", function() {
   if (billAmountInput.value && tipPercentageInput.value) {
     const totalTip = calculateTotalTip();
     totalTipAmount.textContent = totalTip.toFixed(2);
+  } else {
+    totalTipAmount.textContent = 0.0;
   }
 });
 
@@ -28,6 +30,8 @@ billAmountInput.addEventListener("input", function() {
   if (billAmountInput.value && tipPercentageInput.value) {
     const totalTip = calculateTotalTip();
     totalTipAmount.textContent = totalTip.toFixed(2);
+  } else {
+    totalTipAmount.textContent = 0.0;
   }
 });
 
