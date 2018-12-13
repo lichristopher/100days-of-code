@@ -2,5 +2,6 @@ const superheros = [
   "Flash",
   "Batman",
   "Superman",
-  'Wonder woman'
+  'Wonder woman',
+  'Robin'
 ];
