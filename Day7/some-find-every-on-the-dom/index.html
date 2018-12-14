@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="container text-center">
+    <h1>Using Some, Every, Find Array Helpers</h1>
+    <h2>Array:['Flash', 'Superman', 'Green Lantern']</h2>
+    <h3>Array Find</h3>
+    <p>Is superhero on the array? <span id="does-exist"></span></p>
+    <input type="text">
+  </div>
+
+  <script>
+    const doesSuperHeroExist = document.querySelector('#does-exist');
+    const superHeroNameInput = document.querySelector('input')
+    const superheroes = ['Flash', 'Superman', 'Green Lantern'];
+
+    superHeroNameInput.addEventListener('input', function (e) {
+      const superHeroName = e.target.value;
+      // let doesHeroExist = superheroes.includes(superHeroName);
+      let hero = superheroes.find(hero => {
+        return hero.toLowerCase() === superHeroName.toLowerCase();
+      });
+
+      if (hero) {
+        doesSuperHeroExist.textContent = 'True'
+      } else {
+        doesSuperHeroExist.textContent = 'false'
+      }
+
+      // if (doesHeroExist) {
+      //   doesSuperHeroExist.textContent = 'True'
+      // } else {
+      //   doesSuperHeroExist.textContent = 'false'
+      // }
+
+    })
+
+
+  </script>
+</body>
+
+</html>

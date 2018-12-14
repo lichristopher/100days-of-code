@@ -87,8 +87,6 @@ const getItem = function(products, productId) {
 };
 
 const addToShoppingList = function(shoppingList, item) {
-  // console.log(item);
-  // shoppingList.push({ item, quantity: 1 });
   shoppingList.push(item);
 };
 
@@ -96,9 +94,6 @@ productsContainer.addEventListener("click", function(e) {
   if (e.target.classList.contains("buy-product")) {
     const button = e.target;
     const productId = Number(button.dataset.productId);
-    // console.log(productId);
-    // Item to be added to cart
-    // const item = getItem(itemsForsale, 1);
     const item = getItem(itemsForsale, productId);
     console.log(item);
     addToShoppingList(shoppingList, item);

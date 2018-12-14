@@ -27,12 +27,16 @@ tipPercentageInput.addEventListener("input", function() {
 });
 
 billAmountInput.addEventListener("input", function() {
-  if (billAmountInput.value && tipPercentageInput.value) {
-    const totalTip = calculateTotalTip();
-    totalTipAmount.textContent = totalTip.toFixed(2);
-  } else {
-    totalTipAmount.textContent = 0.0;
-  }
+  // if (billAmountInput.value && tipPercentageInput.value) {
+  //   const totalTip = calculateTotalTip();
+  //   totalTipAmount.textContent = totalTip.toFixed(2);
+  // } else {
+  //   totalTipAmount.textContent = 0.0;
+  // }
+
+  const totalTip = calculateTotalTip();
+  console.log(totalTip);
+  totalTipAmount.textContent = totalTip.toFixed(2);
 });
 
 function calculateTotalTip() {
