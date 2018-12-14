@@ -71,9 +71,20 @@ Learned how to make Konami code watching JS30
 
 # Day 5
 
+I coded along with Wes Bos's video about "Quick BMW Part Finder CodeAlong". Learned how to change
+low quality images to high quality images. This only possible if there are high quality images or you know the path
+of the images.
+
 Built a temperature converter that convert
 between Celsius, Fahrenheit and Kelvin. When I put a value of any of the input box. It converts all the values to all scales
 
 # Day 6
 
 Built a shopping cart. Got a problem on how to tally the quantity of an item, but I was able to solved it. I used reduce to tally the quantity of a specific item. When I don't tally the items before I render. What happens is that if you add an item twice or more the cart will display two of the same item, so you have multiple items same items. So what I did is tally the quantity so the user won't see repeated items being shown on the cart and only see the quantity.
+
+# Day 7
+
+Made a simple book list using bootstrap then I implemented a filter function for the find the book title.
+I use filter function to filter the search query
+
+# Day 8
