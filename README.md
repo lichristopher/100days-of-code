@@ -88,3 +88,17 @@ Made a simple book list using bootstrap then I implemented a filter function for
 I use filter function to filter the search query
 
 # Day 8
+
+Learned Big O notation
+
+# Day 9
+
+Made my own forEach, map, filter array helper functions
+
+# Day 10
+
+Lessons Learned:
+
+Javascript arrow functions doesn't have the argument array like object. So If you want to use the argument object you have to use normal function.
+
+Made my own Array.from implementation. Learned es6 Spread and Rest, learned to use es6 default parameters.
