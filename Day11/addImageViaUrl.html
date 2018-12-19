@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        border: 5px solid red;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      span {
+        position: absolute;
+        color: white;
+        font-size: 2em;
+
+        left: 30px;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload image via url</h1>
+    <div id="capture">
+      <span>Image text</span>
+      <img src="image.png" alt="" id="profile-picture" />
+    </div>
+
+    <button>Generate image</button>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      const picture = document.querySelector("#profile-picture");
+      const button = document.querySelector("button");
+      button.addEventListener("click", function() {
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+          document.body.appendChild(canvas);
+        });
+      });
+    </script>
+  </body>
+</html>

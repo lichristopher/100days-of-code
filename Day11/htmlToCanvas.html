@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Generate Image</button>
+    <div id="capture">
+      <!-- This doesnt work -->
+      <!-- <img src="https://www.fillmurray.com/460/300" alt="" />  -->
+      <!-- If I use local images it works -->
+      <img src="local-image.png" alt="" />
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", function() {
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+          document.body.appendChild(canvas);
+        });
+      });
+    </script>
+  </body>
+</html>
