@@ -102,3 +102,16 @@ Lessons Learned:
 Javascript arrow functions doesn't have the argument array like object. So If you want to use the argument object you have to use normal function.
 
 Made my own Array.from implementation. Learned es6 Spread and Rest, learned to use es6 default parameters.
+
+# Day 11
+
+- I made an add upload Image via URL functionality in html
+- Built an html image generator. Where you can put text inside a div. Then you can generate it with an image
+
+# Day 12
+
+-Built a javascript drumkit. Like the one on wesbos's videos
+
+# Day 13
+
+-Built a javascript drumkit. Like the one on wesbos's videos
