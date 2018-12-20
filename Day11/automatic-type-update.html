@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      p {
+        font-size: 5em;
+        height: 300px;
+        background: red;
+      }
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>Type here</p>
+      <input type="text" />
+    </div>
+    ini
+  </body>
+
+  <script>
+    const p = document.querySelector("p");
+    const input = document.querySelector("input");
+    input.addEventListener("input", function(e) {
+      p.textContent = e.target.value;
+    });
+  </script>
+</html>
