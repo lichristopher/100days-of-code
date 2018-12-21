@@ -21,18 +21,17 @@
         justify-content: center;
         color: white;
         flex-direction: column;
-        flex-wrap: no-wrap;
+        /* flex-wrap: no-wrap; */
       }
 
       .container {
         width: 560px;
-        height: 530px;
+        height: 500px;
         display: flex;
         flex-wrap: wrap;
       }
 
       .key {
-        flex: 1;
         flex-basis: calc(33.33333% - 20px);
         margin: 0 10px;
         margin-top: 10px;
@@ -42,13 +41,14 @@
         font-size: 4em;
         border-radius: 10px;
         /* height: calc(33.33333% - 20px); */
-        height: 33.33333%
+        /* border: 1px solid red; */
+        height: 33.3333333333%;
         background-color: rgba(237, 240, 247, 0.5);
       }
 
       .pressed {
         background-color: lime;
-        font-size: 6em;
+        font-size: 8em;
         background-color: rgba(237, 240, 247, 1);
       }
     </style>
