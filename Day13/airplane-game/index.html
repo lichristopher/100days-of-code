@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-image: url("assets/png/BG.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      img {
+        width: 20%;
+        position: absolute;
+      }
+      img.prize {
+        width: 90px;
+        position: absolute;
+        right: 80px;
+        top: 40px;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="assets/png/Plane/Fly (1).png" alt="" />
+    <!-- <img src="assets/png/coin.gif" alt="" /> -->
+    <img
+      class="prize"
+      src="https://loading.io/spinners/flat-gear/index.flat-config-gear-loading-icon.svg"
+      alt=""
+    />
+    <script>
+      const sprite = document.querySelector("img");
+      let isGameOver = false;
+      const spriteCoordinates = {
+        top: 0,
+        left: 0
+      };
+
+      function playChopperSound() {
+        var audio = new Audio(`assets/sound/chopper.mp3`);
+        audio.play();
+      }
+
+      function playWinningSound() {
+        var audio = new Audio(`assets/sound/victory.mp3`);
+        audio.play();
+      }
+
+      function playCoinSound() {
+        var audio = new Audio(`assets/sound/coin.wav`);
+        audio.play();
+      }
+      // playChopperSound();
+
+      window.addEventListener("keydown", function(e) {
+        if (isGameOver === false) {
+          const key = Number(e.keyCode);
+          // Value for how many px should the sprite move
+          const moveSteps = 30;
+          if (key === 39) {
+            spriteCoordinates.left += moveSteps;
+            sprite.style.left = `${spriteCoordinates.left}px`;
+          } else if (key === 40) {
+            spriteCoordinates.top += moveSteps;
+            sprite.style.top = `${spriteCoordinates.top}px`;
+          } else if (key === 37) {
+            spriteCoordinates.left -= moveSteps;
+            sprite.style.left = `${spriteCoordinates.left}px`;
+          } else if (key === 38) {
+            spriteCoordinates.top -= moveSteps;
+            sprite.style.top = `${spriteCoordinates.top}px`;
+          }
+
+          if (spriteCoordinates.left >= 1110) {
+            const prize = document.querySelector("img.prize");
+            prize.style.display = "none";
+            isGameOver = true;
+            playCoinSound();
+            playWinningSound();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
