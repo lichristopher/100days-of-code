@@ -120,7 +120,7 @@ Made my own Array.from implementation. Learned es6 Spread and Rest, learned to u
 
 -Made a simple javascript game. The mechanics of the game is to make the airplane touch the coin to win the game.
 
-# Day 14
+# Day 15
 
 Learned something new today, when adding an eventListener to the same event it just compounds the functions.
 While if you use an onevent it overwrites the function before it.
