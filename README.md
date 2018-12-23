@@ -124,3 +124,7 @@ Made my own Array.from implementation. Learned es6 Spread and Rest, learned to u
 
 Learned something new today, when adding an eventListener to the same event it just compounds the functions.
 While if you use an onevent it overwrites the function before it.
+
+# Day 16
+
+- Learned how to create my own promises.
